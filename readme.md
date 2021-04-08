@@ -1,4 +1,4 @@
-# Energy Yield Software #123
+# Energy Yield Software
 
 This software aims to simulate the energy yield of single-junction and multi-junction solar cells. In contrast to the power conversion efficiency (PCE), the energy yield (EY) accounts for environmental conditions, such as constantly changing irradiation conditions or the ambient temperature.
 
