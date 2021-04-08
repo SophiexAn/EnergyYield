@@ -63,12 +63,12 @@ end
 % Incohrent layers can be defined manually and are automatically assumed, if the layer thickness exceeds 5µm
 % A bifacial treatment of the stack involves a second simulation for light incident from the rear side
 % The names of the absorbers can be specified as cell. An empty cell leads to auto-detection of the absorbers
-Stack = {'Air','MgF2','Glass','ITOfront','SnO2','Pero1.62','Spiro-OMeTAD',...
+Stack = {'Air','MgF2','Glass1.5','ITOfront','SnO2','Pero1.62','SpiroOMeTAD',...
     'ITOfront','aSi(n)','aSi(i)','cSi','aSi(i)','aSi(p)','ITOfront','Air'};
 LayerThickness = [inf,100,1E4,100,10,450,20,25,5,5,250E3,5,5,100,inf];
 Morphology = {'Flat','RandomUpright','RandomUpright'};
 Polarization   = 'mixed';
-lambdaTMM      = 300:10:1200;  
+lambdaTMM      = 300:5:1200;  
 AngleResolution = 5;
 IncoherentLayers = {'Air','Glass','EVA','Encapsulation','PDMS','cSi'};
 bifacial = false;
@@ -88,7 +88,7 @@ plot(lambdaTMM, optics.R );
 plot(lambdaTMM, optics.T ); 
 plot(lambdaTMM, Aall,'--');
 plot(lambdaTMM, Aall + optics.R + optics.T, ':' ); hold off
-
+xlabel('Wavelength (nm)'); ylabel('R, A, T')
 
 
 
